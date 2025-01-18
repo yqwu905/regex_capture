@@ -1,0 +1,15 @@
+[package]
+name = "regex_capture"
+version = "0.0.0"
+authors = ["Yuanqing Wu <wuyuanqing4@huawei.com>"]
+description = "Auto implement FromStr trait for struct with regex capture"
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1"
+proc-macro2 = "1.0"
+syn = { version = "*", features = ["extra-traits"] }
+regex = "*"
