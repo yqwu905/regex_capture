@@ -4,6 +4,7 @@ version = "0.0.0"
 authors = ["Yuanqing Wu <wuyuanqing4@huawei.com>"]
 description = "Auto implement FromStr trait for struct with regex capture"
 edition = "2018"
+license = "MIT OR Apache-2.0"
 
 [lib]
 proc-macro = true
@@ -11,5 +12,5 @@ proc-macro = true
 [dependencies]
 quote = "1"
 proc-macro2 = "1.0"
-syn = { version = "*", features = ["extra-traits"] }
-regex = "*"
+syn = { version = "2.0", features = ["extra-traits"] }
+regex = "1.0"

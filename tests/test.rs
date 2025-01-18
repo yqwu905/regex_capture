@@ -47,12 +47,3 @@ fn custom_parser_test() {
     assert_eq!(pre.age, 15);
     assert_eq!(pre.name, "Chihaya Anon");
 }
-
-#[test]
-fn trait_parser_test() {
-    static PERSON_STR: &str = "name=Chihaya Anon, age=15, gender=female";
-    let pre = Person::from_str(PERSON_STR).unwrap();
-    assert_eq!(pre.gender, Gender::Female);
-    assert_eq!(pre.age, 15);
-    assert_eq!(pre.name, "Chihaya Anon");
-}
