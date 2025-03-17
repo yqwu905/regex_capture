@@ -55,8 +55,8 @@ pub fn my_derive(_input: TokenStream) -> TokenStream {
                     }
                 }
                 let reg_cap_get = format!(
-                    "reg_cap.name(\"{}\").ok_or(\"Failed to matched regex group {}\")?.as_str()",
-                    field_name, field_name
+                    "reg_cap.name(\"{}\").map_or(\"\", |e| e.as_str())",
+                    field_name
                 );
                 let field_token: TokenStream2 = match field {
                     StructField::Raw(ref field) => format!("{}: {}.parse()?,", field, reg_cap_get)
